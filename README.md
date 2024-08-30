@@ -20,6 +20,16 @@ curl -X GET "http://localhost:9200/$INDEX_NAME/_search?pretty" -H 'Content-Type:
   }
 }'
 ```
+## Retrieve the first 10 documents from the index
+
+```bash	
+curl -X GET "http://localhost:9200/your_index/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "from": 0,
+  "size": 10
+}
+'
+```
 
 ## Retrieve a document with a specific id
 
